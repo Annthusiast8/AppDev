@@ -1,0 +1,259 @@
+body {
+    font-family: 'Cambria';
+    background: #D9D9D9;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .dashboard-section {
+    margin: 10 auto; /* Center the dashboard section */
+    max-width: 1200px; /* Set a maximum width for the dashboard section */
+    padding: 20px; /* Add padding for better spacing */
+    top: -20px;
+    left: 15%;
+  }
+  .search-bar {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically */
+    flex-grow: 10; /* Allows the search bar to grow and take up remaining space */
+    margin-right: 10px; /* Add some space between search bar and navigation buttons */
+  }
+  
+  /* Set the width of the search icon */
+  .search-icon img {
+    width: 20px; /* Set the width of the search icon */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 5px; /* Add some space between the icon and the input field */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .page-navigation {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom */
+  left: 80%; /* Align the buttons to the center */
+  transform: translateX(-50%); /* Center the buttons horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the buttons horizontally */
+  }
+  
+  .page-navigation button {
+  margin: 0 5px; /* Add space between navigation buttons */
+  padding: 10px 20px; /* Add padding to make the buttons larger */
+  background-color: #526153; /* Set background color */
+  color: white; /* Set text color */
+  border: none;
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer;
+  }
+  
+  .page-navigation button:hover {
+  background-color: #4CAF50; /* Darker background color on hover */
+  }
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+    .bottom-bar {
+        position: static;
+   
+        flex-direction: column;
+    }
+  }
+  .dashboard-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .dashboard-section th, .dashboard-section td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .dashboard-section th {
+    background-color: skyblue; /* Header background color */
+    color: rgb(19, 18, 18);
+  }
+  
+  .dashboard-section tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .dashboard-section tr:hover {
+    background-color: #ddd;
+  }
+  
+  .dashboard-section .edit-delete-buttons input[type="image"] {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  #datetime{
+    position: relative;
+    top: -100px;
+    left: 80%;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #D9D9D9;
+    padding: 10px;
+    font-size: 24px;
+    color: rgb(20, 20, 20);
+    border-bottom: 2px solid #b1aaaa;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensure header is on top of other elements */
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-img {
+    width: 130%;
+    height: auto;
+  }
+  
+  .header-text {
+    font-weight: bold;
+  }
+  
+  .icon {
+    position: fixed;
+    top: -25px;
+    left: 70%;
+    font-size: 15px;
+  }
+  #userIcon{
+    position: relative;
+    top: 25px;
+    left: 21vh;
+    width: 60px;
+  }
+  .icon-dropdown {
+    position: relative;
+    border-radius: 5px;
+  }
+  .icon-dropdown a{
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .icon-dropdown-content {
+    display: none;
+    border-radius: 3px;
+    position: absolute;
+    background-color: #D9D9D9;
+    min-width: 120px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .icon-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .icon-dropdown-content a:hover {
+    background-color: #b7b7b7;
+  }
+  
+  .icon-dropdown:hover .icon-dropdown-content {
+    display: block;
+  }
+  
+  nav {
+    width: 14%;
+    height: 100vh;
+    background: #D9D9D9;
+    border-right: 2px solid #b1aaaa;
+    position: fixed;
+    top: 5%;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1px;
+    margin-left: 10px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+  .dashboard-section {
+    position: fixed;
+    top: 30px; /* Height of header */
+    right: 0;
+    width: calc(100% - 14%);
+  }
+  nav ul li a:hover {
+    background-color: #b7b7b7;
+    border-radius: 3px;
+  }
+  
+  button {
+    background-color: #4C4545;
+    border: none;
+    width: auto; /* Set width to auto to fit content */
+    max-width: 150px; /* Limit maximum width */
+    color: white;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    margin: 10px auto; /* Set margin */
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+  }
+  .search-container {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically */
+    flex-grow: 10; /* Allows the search bar to grow and take up remaining space */
+    margin-right: 10px; /* Add some space between search bar and navigation buttons */
+  }
+  
+  /* CSS for screens smaller than or equal to 768px */
+  @media only screen and (max-width: 768px) {
+    .dashboard-section {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
+  
+    nav {
+        width: 100%;
+        position: static;
+        border-right: none;
+    }
+    
+    nav ul {
+        margin-left: 0;
+    }
+  
+    nav ul li {
+        width: 100%;
+    }
+  }
+  

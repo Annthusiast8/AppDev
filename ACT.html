@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ACT</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  function generateDateTime() {
+var currentDate = new Date();
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+var formattedDateTime = currentDate.toLocaleDateString('en-US', options);
+document.getElementById("datetime").innerHTML = formattedDateTime;
+}
+
+// Call the function when the page loads to initially display the date and time
+window.onload = function() {
+generateDateTime();
+};
+   </script>
+</head>
+<title>ACT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ACT.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Formalytics.png" alt="FORMALYTICS" class="logo-img">
+        </div>
+        <div class="header-text">
+            FORMALYTICS
+        </div>
+        <div class="icon icon-dropdown">
+            <a href="#user">
+                <img src="icon.png" alt="User Icon" id="userIcon">
+                USER PROFILE
+            </a>
+            <div class="icon-dropdown-content">
+                <a href="login.html">Log out</a>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><button>CREATE SURVEY +</button></li>
+            <li><a href="#dashboard"><img src="Dashboard.png" alt="Dashboard Icon"> <h2>DASHBOARD</h2></a></li>
+            <li><a href="Survey.html"><img src="Survey List.png" alt="Survey List Icon"> <h2>SURVEY LIST</h2></a></li>
+            <li><a href="#bscs"><img src="Human icon.png" alt="BSCS Icon"> <h2>BSCS</h2></a></li>
+            <li><a href="#bsit"><img src="Human icon.png" alt="BSIT Icon"> <h2>BSIT</h2></a></li>
+            <li><a href="#bsemc"><img src="Human icon.png" alt="BSEMC Icon"> <h2>BSEMC</h2></a></li>
+            <li><a href="#act"><img src="Human Icon.png" alt="ACT Icon"> <h2>ACT</h2></a></li>
+        </ul>
+      </nav>
+      <div class="dashboard-section">
+        <h2 id="DB">ACT ALUMNI'S RECORDS</h2>
+        <div class="search-icon">
+          <img src="sea.png" alt="Search Icon">
+        </div>
+            <div class="search-bar">
+              <input type="text" id="searchInput" placeholder="Search Record">
+          </div>
+          <div class="date-time">
+            <p id="datetime"></p>
+        </div>
+    <table>
+        <tr>
+          <th>#</th>
+          <th>NAME</th>
+          <th>AGE</th>
+          <th>GENDER</th>
+          <th>CONTACT</th>
+          <th>COURSE/BATCH</th>
+          <th>WORK STATUS</th>
+          <th>EDIT</th>
+        </tr>
+        <tr>
+            <td>1</td>
+          <td>MARTHA YANG</td>
+          <td>36</td>
+          <td>FEMALE</td>
+          <td>123456789</td>
+          <td>ACT/Y.R.2005</td>
+          <td>EMPLOYED</td>
+          <td><input type="image" src="pen.png" alt="Edit Button" id="editbutton"><input type="image" src="bin.png" alt="Delete Button" id="deletebutton"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+          <td>CARL DELA CRUZ</td>
+          <td>37</td>
+          <td>MALE</td>
+          <td>123456789</td>
+          <td>ACT/Y.R.2006</td>
+          <td>UNEMPLOYED</td>
+          <td><input type="image" src="pen.png" alt="Edit Button" id="editbutton"><input type="image" src="bin.png" alt="Delete Button" id="deletebutton"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+          <td>CARLA YEN</td>
+          <td>38</td>
+          <td>FEMALE</td>
+          <td>123456789</td>
+          <td>ACT/Y.R.2007</td>
+          <td>OTHER</td>
+          <td><input type="image" src="pen.png" alt="Edit Button" id="editbutton"><input type="image" src="bin.png" alt="Delete Button" id="deletebutton"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+          <td>PAULO VILLANUEVA</td>
+          <td>39</td>
+          <td>MALE</td>
+          <td>123456789</td>
+          <td>ACT/Y.R.2008</td>
+          <td>UNEMPLOYED</td>
+          <td><input type="image" src="pen.png" alt="Edit Button" id="editbutton"><input type="image" src="bin.png" alt="Delete Button" id="deletebutton"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+          <td>KEIFFER FLORES</td>
+          <td>40</td>
+          <td>MALE</td>
+          <td>123456789</td>
+          <td>ACT/Y.R.2009</td>
+          <td>UNEMPLOYED</td>
+          <td><input type="image" src="pen.png" alt="Edit Button" id="editbutton"><input type="image" src="bin.png" alt="Delete Button" id="deletebutton"></td>
+        </tr>
+      </table>
+      <div class="page-navigation">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search Page">
+        </div>
+        <button id="prevBtn">Previous</button>
+        <span id="page-counter">1</span>
+        <button id="nextBtn">Next</button>
+    </div>
+</body>
+</html>
+              
